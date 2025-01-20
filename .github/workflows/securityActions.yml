@@ -22,3 +22,9 @@ jobs:
 
       - name: Create ZIP
         run: zip -r project_code.zip ./
+
+      - name: Upload ZIP as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: project-archive
+          path: project_code.zip
