@@ -10,7 +10,7 @@ jobs:
 
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
-        continue-on-error: true #todo quitar esto, es para pruebas
+        continue-on-error: true #TODO: Cambiar
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
@@ -22,7 +22,7 @@ jobs:
         with:
           sarif_file: snyk.sarif
 
-      - name: Create .zip with the project code
+      - name: Create zip
         uses: ihiroky/archive-action@v1
         with:
           root_dir: .
