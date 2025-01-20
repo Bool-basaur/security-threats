@@ -23,5 +23,5 @@ jobs:
       - name: Upload ZIP as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: project-archive
+          name: project-artifacts
           path: project_code.zip
