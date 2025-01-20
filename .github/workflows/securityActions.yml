@@ -20,8 +20,8 @@ jobs:
       - name: Check current directory
         run: pwd && ls -la
 
-      - name: Create ZIP
-        run: zip -r project_code.zip ./
+      - name: Create ZIP from 'src' folder
+        run: zip -r project_code.zip ./src
 
       - name: Upload ZIP as artifact
         uses: actions/upload-artifact@v3
